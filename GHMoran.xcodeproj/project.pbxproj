@@ -17,7 +17,6 @@
 		01BF9C261BFF554700B2944A /* GHLoginRequestParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BF9C101BFF554700B2944A /* GHLoginRequestParser.m */; };
 		01BF9C271BFF554700B2944A /* GHLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BF9C131BFF554700B2944A /* GHLoginRequest.m */; };
 		01BF9C281BFF554700B2944A /* BLMultipartForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BF9C161BFF554700B2944A /* BLMultipartForm.m */; };
-		01BF9C291BFF554700B2944A /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01BF9C181BFF554700B2944A /* images.xcassets */; };
 		01BF9C2A1BFF554700B2944A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01BF9C191BFF554700B2944A /* LaunchScreen.storyboard */; };
 		01BF9C2B1BFF554700B2944A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01BF9C1B1BFF554700B2944A /* Info.plist */; };
 		01BF9C2C1BFF554700B2944A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BF9C1C1BFF554700B2944A /* main.m */; };
@@ -34,6 +33,16 @@
 		01F67BC41C05E67100F74828 /* GHReImageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F67BC31C05E67100F74828 /* GHReImageRequest.m */; };
 		01F67BC71C05FC4100F74828 /* GHPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F67BC61C05FC4100F74828 /* GHPublishViewController.m */; };
 		01FC15571C06F5DF00C3BDCA /* GHPublish.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01FC15561C06F5DF00C3BDCA /* GHPublish.storyboard */; };
+		01FC15591C072C8800C3BDCA /* GHSquare.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01FC15581C072C8800C3BDCA /* GHSquare.storyboard */; };
+		01FC155B1C072ECD00C3BDCA /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01FC155A1C072ECD00C3BDCA /* images.xcassets */; };
+		01FC15601C0732A300C3BDCA /* GHViewDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FC155F1C0732A300C3BDCA /* GHViewDetailViewController.m */; };
+		01FC15641C07339D00C3BDCA /* GHSquareCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FC15631C07339D00C3BDCA /* GHSquareCellTableViewCell.m */; };
+		01FC156A1C07346D00C3BDCA /* GHSquareCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FC15691C07346D00C3BDCA /* GHSquareCollectionCell.m */; };
+		01FC156D1C07400100C3BDCA /* GHSquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FC156C1C07400100C3BDCA /* GHSquareViewController.m */; };
+		01FC15711C07414B00C3BDCA /* GHSquareModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FC15701C07414B00C3BDCA /* GHSquareModel.m */; };
+		01FC15751C0741CF00C3BDCA /* GHPictureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FC15741C0741CF00C3BDCA /* GHPictureModel.m */; };
+		01FC157F1C07431A00C3BDCA /* GHSquareRequestParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FC157E1C07431900C3BDCA /* GHSquareRequestParser.m */; };
+		01FC15831C074BBD00C3BDCA /* GHSquareRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FC15821C074BBD00C3BDCA /* GHSquareRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +85,6 @@
 		01BF9C131BFF554700B2944A /* GHLoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHLoginRequest.m; sourceTree = "<group>"; };
 		01BF9C151BFF554700B2944A /* BLMultipartForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLMultipartForm.h; sourceTree = "<group>"; };
 		01BF9C161BFF554700B2944A /* BLMultipartForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLMultipartForm.m; sourceTree = "<group>"; };
-		01BF9C181BFF554700B2944A /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 		01BF9C191BFF554700B2944A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01BF9C1B1BFF554700B2944A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01BF9C1C1BFF554700B2944A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -104,6 +112,24 @@
 		01F67BC51C05FC4100F74828 /* GHPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHPublishViewController.h; sourceTree = "<group>"; };
 		01F67BC61C05FC4100F74828 /* GHPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHPublishViewController.m; sourceTree = "<group>"; };
 		01FC15561C06F5DF00C3BDCA /* GHPublish.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GHPublish.storyboard; sourceTree = "<group>"; };
+		01FC15581C072C8800C3BDCA /* GHSquare.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GHSquare.storyboard; sourceTree = "<group>"; };
+		01FC155A1C072ECD00C3BDCA /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
+		01FC155E1C0732A300C3BDCA /* GHViewDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHViewDetailViewController.h; sourceTree = "<group>"; };
+		01FC155F1C0732A300C3BDCA /* GHViewDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHViewDetailViewController.m; sourceTree = "<group>"; };
+		01FC15621C07339D00C3BDCA /* GHSquareCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHSquareCellTableViewCell.h; sourceTree = "<group>"; };
+		01FC15631C07339D00C3BDCA /* GHSquareCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHSquareCellTableViewCell.m; sourceTree = "<group>"; };
+		01FC15681C07346D00C3BDCA /* GHSquareCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHSquareCollectionCell.h; sourceTree = "<group>"; };
+		01FC15691C07346D00C3BDCA /* GHSquareCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHSquareCollectionCell.m; sourceTree = "<group>"; };
+		01FC156B1C07400100C3BDCA /* GHSquareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHSquareViewController.h; sourceTree = "<group>"; };
+		01FC156C1C07400100C3BDCA /* GHSquareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHSquareViewController.m; sourceTree = "<group>"; };
+		01FC156F1C07414B00C3BDCA /* GHSquareModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHSquareModel.h; sourceTree = "<group>"; };
+		01FC15701C07414B00C3BDCA /* GHSquareModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHSquareModel.m; sourceTree = "<group>"; };
+		01FC15731C0741CF00C3BDCA /* GHPictureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHPictureModel.h; sourceTree = "<group>"; };
+		01FC15741C0741CF00C3BDCA /* GHPictureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHPictureModel.m; sourceTree = "<group>"; };
+		01FC157D1C07431900C3BDCA /* GHSquareRequestParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHSquareRequestParser.h; sourceTree = "<group>"; };
+		01FC157E1C07431900C3BDCA /* GHSquareRequestParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHSquareRequestParser.m; sourceTree = "<group>"; };
+		01FC15811C074BBD00C3BDCA /* GHSquareRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHSquareRequest.h; sourceTree = "<group>"; };
+		01FC15821C074BBD00C3BDCA /* GHSquareRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHSquareRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +239,7 @@
 		01BF9C001BFF554700B2944A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				01FC155C1C07322F00C3BDCA /* Square */,
 				01456CB21C04868E00063C87 /* My */,
 				01F3D4611C03242000882DDE /* LoginAndRegister */,
 			);
@@ -231,6 +258,8 @@
 		01BF9C091BFF554700B2944A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				01FC15721C0741BB00C3BDCA /* Pictures */,
+				01FC156E1C07412C00C3BDCA /* Square */,
 				01BF9C0A1BFF554700B2944A /* Login */,
 			);
 			path = Models;
@@ -258,6 +287,7 @@
 		01BF9C0E1BFF554700B2944A /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
+				01FC15791C0742E700C3BDCA /* GHSquareRequestParser */,
 				01BF9C0F1BFF554700B2944A /* GHLoginRequestParser.h */,
 				01BF9C101BFF554700B2944A /* GHLoginRequestParser.m */,
 				01F3D46C1C03546C00882DDE /* GHRegisterRequestParser.h */,
@@ -269,6 +299,7 @@
 		01BF9C111BFF554700B2944A /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				01FC15801C074B9700C3BDCA /* Square */,
 				01F67BBE1C05AE7600F74828 /* My */,
 				01F3D4681C03468300882DDE /* LoginAndRegister */,
 			);
@@ -287,7 +318,7 @@
 		01BF9C171BFF554700B2944A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				01BF9C181BFF554700B2944A /* images.xcassets */,
+				01FC155A1C072ECD00C3BDCA /* images.xcassets */,
 				01BF9C191BFF554700B2944A /* LaunchScreen.storyboard */,
 			);
 			path = Resource;
@@ -305,6 +336,7 @@
 		01BF9C1D1BFF554700B2944A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				01FC15611C0732EF00C3BDCA /* Cell */,
 				01BF9C1F1BFF554700B2944A /* Storyboard */,
 			);
 			path = Views;
@@ -316,6 +348,7 @@
 				01BF9C201BFF554700B2944A /* GHLoginAndRegister.storyboard */,
 				01456CB01C04851700063C87 /* GHMy.storyboard */,
 				01FC15561C06F5DF00C3BDCA /* GHPublish.storyboard */,
+				01FC15581C072C8800C3BDCA /* GHSquare.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -353,6 +386,72 @@
 				01F67BC31C05E67100F74828 /* GHReImageRequest.m */,
 			);
 			name = My;
+			sourceTree = "<group>";
+		};
+		01FC155C1C07322F00C3BDCA /* Square */ = {
+			isa = PBXGroup;
+			children = (
+				01FC155D1C07322F00C3BDCA /* ViewDetail */,
+				01FC156B1C07400100C3BDCA /* GHSquareViewController.h */,
+				01FC156C1C07400100C3BDCA /* GHSquareViewController.m */,
+			);
+			path = Square;
+			sourceTree = "<group>";
+		};
+		01FC155D1C07322F00C3BDCA /* ViewDetail */ = {
+			isa = PBXGroup;
+			children = (
+				01FC155E1C0732A300C3BDCA /* GHViewDetailViewController.h */,
+				01FC155F1C0732A300C3BDCA /* GHViewDetailViewController.m */,
+			);
+			path = ViewDetail;
+			sourceTree = "<group>";
+		};
+		01FC15611C0732EF00C3BDCA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				01FC15621C07339D00C3BDCA /* GHSquareCellTableViewCell.h */,
+				01FC15631C07339D00C3BDCA /* GHSquareCellTableViewCell.m */,
+				01FC15681C07346D00C3BDCA /* GHSquareCollectionCell.h */,
+				01FC15691C07346D00C3BDCA /* GHSquareCollectionCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		01FC156E1C07412C00C3BDCA /* Square */ = {
+			isa = PBXGroup;
+			children = (
+				01FC156F1C07414B00C3BDCA /* GHSquareModel.h */,
+				01FC15701C07414B00C3BDCA /* GHSquareModel.m */,
+			);
+			path = Square;
+			sourceTree = "<group>";
+		};
+		01FC15721C0741BB00C3BDCA /* Pictures */ = {
+			isa = PBXGroup;
+			children = (
+				01FC15731C0741CF00C3BDCA /* GHPictureModel.h */,
+				01FC15741C0741CF00C3BDCA /* GHPictureModel.m */,
+			);
+			path = Pictures;
+			sourceTree = "<group>";
+		};
+		01FC15791C0742E700C3BDCA /* GHSquareRequestParser */ = {
+			isa = PBXGroup;
+			children = (
+				01FC157D1C07431900C3BDCA /* GHSquareRequestParser.h */,
+				01FC157E1C07431900C3BDCA /* GHSquareRequestParser.m */,
+			);
+			path = GHSquareRequestParser;
+			sourceTree = "<group>";
+		};
+		01FC15801C074B9700C3BDCA /* Square */ = {
+			isa = PBXGroup;
+			children = (
+				01FC15811C074BBD00C3BDCA /* GHSquareRequest.h */,
+				01FC15821C074BBD00C3BDCA /* GHSquareRequest.m */,
+			);
+			name = Square;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -460,8 +559,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				01BF9C2D1BFF554700B2944A /* GHLoginAndRegister.storyboard in Resources */,
+				01FC155B1C072ECD00C3BDCA /* images.xcassets in Resources */,
 				01FC15571C06F5DF00C3BDCA /* GHPublish.storyboard in Resources */,
-				01BF9C291BFF554700B2944A /* images.xcassets in Resources */,
+				01FC15591C072C8800C3BDCA /* GHSquare.storyboard in Resources */,
 				01BF9C2A1BFF554700B2944A /* LaunchScreen.storyboard in Resources */,
 				01456CB11C04851700063C87 /* GHMy.storyboard in Resources */,
 				01BF9C2B1BFF554700B2944A /* Info.plist in Resources */,
@@ -490,22 +590,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				01BF9C281BFF554700B2944A /* BLMultipartForm.m in Sources */,
+				01FC15751C0741CF00C3BDCA /* GHPictureModel.m in Sources */,
 				01F3D46B1C0346CF00882DDE /* GHRegisterRequest.m in Sources */,
 				01F3D4671C03245500882DDE /* GHRegisterViewController.m in Sources */,
+				01FC15601C0732A300C3BDCA /* GHViewDetailViewController.m in Sources */,
 				01BF9C261BFF554700B2944A /* GHLoginRequestParser.m in Sources */,
 				01BF9C271BFF554700B2944A /* GHLoginRequest.m in Sources */,
 				01BF9C241BFF554700B2944A /* GHGlobal.m in Sources */,
 				01F3D4641C03242000882DDE /* GHLoginAndRegisterViewController.m in Sources */,
+				01FC15641C07339D00C3BDCA /* GHSquareCellTableViewCell.m in Sources */,
 				01F67BB71C059D8F00F74828 /* GHHeadImageViewController.m in Sources */,
 				01F67BC11C05AE9A00F74828 /* GHReNameRequest.m in Sources */,
+				01FC15831C074BBD00C3BDCA /* GHSquareRequest.m in Sources */,
 				01F67BB41C059B8300F74828 /* GHNickNameViewController.m in Sources */,
 				01F67BBD1C05A25E00F74828 /* GHGetImage.m in Sources */,
 				01456CB51C0486BE00063C87 /* GHMyViewController.m in Sources */,
+				01FC156D1C07400100C3BDCA /* GHSquareViewController.m in Sources */,
+				01FC157F1C07431A00C3BDCA /* GHSquareRequestParser.m in Sources */,
 				01F3D46E1C03546C00882DDE /* GHRegisterRequestParser.m in Sources */,
 				01BF9C251BFF554700B2944A /* GHUserModel.m in Sources */,
 				01F67BC71C05FC4100F74828 /* GHPublishViewController.m in Sources */,
 				01BF9C2C1BFF554700B2944A /* main.m in Sources */,
+				01FC15711C07414B00C3BDCA /* GHSquareModel.m in Sources */,
 				01F67BC41C05E67100F74828 /* GHReImageRequest.m in Sources */,
+				01FC156A1C07346D00C3BDCA /* GHSquareCollectionCell.m in Sources */,
 				01BF9C211BFF554700B2944A /* AppDelegate.m in Sources */,
 				01F67BBA1C05A15F00F74828 /* GHFollowUsAndHomePageViewController.m in Sources */,
 			);

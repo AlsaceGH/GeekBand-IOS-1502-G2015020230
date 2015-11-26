@@ -65,20 +65,4 @@
 }
 
 
-
-//- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-//    NSString *string=[[NSString alloc] initWithData:self.receivedData encoding:NSUTF8StringEncoding];
-//    NSLog(@"ReName data string:%@",string);
-//    if ([_delegate respondsToSelector:@selector(reimageRequestSuccess:)]) {
-//        [_delegate reimageRequestSuccess:self];
-//    }
-//}
-//
-//- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-//    NSLog(@"error: %@", error);
-//    if ([_delegate respondsToSelector:@selector(reimageRequestFailed:error:)]) {
-//        [_delegate reimageRequestFailed:self error:error];
-//    }
-//}
-
 @end

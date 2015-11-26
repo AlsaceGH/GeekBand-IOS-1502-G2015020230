@@ -10,7 +10,8 @@
 #import "AppDelegate.h"
 #import "GHLoginAndRegisterViewController.h"
 #import "GHMyViewController.h"
-
+#import "GHSquareCellTableViewCell.h"
+#import "GHSquareViewController.h"
 
 
 @interface AppDelegate ()
@@ -61,7 +62,9 @@
 #pragma mark load view controller
 -(void)loadMainViewWithController:(UIViewController *)controller{
     //square
-    UIViewController *squareVC=[[UIViewController alloc] init];
+    UIStoryboard *squareStoryboard=[UIStoryboard storyboardWithName:@"GHSquare" bundle:[NSBundle mainBundle]];
+    GHSquareViewController *squareVC=[squareStoryboard instantiateViewControllerWithIdentifier:@"SquareStoryboard"];
+   
     UINavigationController *nav1=[[UINavigationController alloc] initWithRootViewController:squareVC];
     nav1.navigationBar.barTintColor=[[UIColor alloc] initWithRed:230/255.0 green:106/255.0 blue:58/255.0 alpha:1];
     
