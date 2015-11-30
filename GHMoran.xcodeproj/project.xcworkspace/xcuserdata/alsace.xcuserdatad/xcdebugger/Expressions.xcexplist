@@ -11,6 +11,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[GHSquareCell collectionView:didSelectItemAtIndexPath:]:GHSquareCell.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[GHReImageRequest sendReImageRequestWithImage:delegate:]:GHReImageRequest.m">
          <PersistentStrings>
             <PersistentString
@@ -40,6 +48,17 @@
          <PersistentStrings>
             <PersistentString
                value = "[GHGlobal shareGlobal].user">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[GHSquareViewController tableView:cellForRowAtIndexPath:]:GHSquareViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.addrArray">
+            </PersistentString>
+            <PersistentString
+               value = "self.dataDic">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

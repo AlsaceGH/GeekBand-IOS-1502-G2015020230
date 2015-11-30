@@ -17,7 +17,7 @@
     [self.urlConnection cancel];
     
     self.delegate = delegate;
-    NSData *data=UIImageJPEGRepresentation(image, 0.000001);
+    NSData *data=UIImageJPEGRepresentation(image, 0.001);
     // POST
     NSString *urlString = @"http://moran.chinacloudapp.cn/moran/web/user/avatar";
     NSString *encodedUrlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];

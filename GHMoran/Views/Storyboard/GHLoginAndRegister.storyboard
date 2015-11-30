@@ -62,10 +62,9 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="viP-h1-kPP" kind="popover" popoverAnchorView="y63-Wj-aU4" id="6Ia-f8-9pw">
+                                    <segue destination="viP-h1-kPP" kind="push" id="6Ia-f8-9pw">
                                         <segue key="commit" inheritsFrom="parent" id="z2E-CK-LpB"/>
                                         <segue key="preview" inheritsFrom="commit" id="DRg-Gi-Bhv"/>
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
                             </button>

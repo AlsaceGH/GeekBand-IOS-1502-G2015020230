@@ -10,4 +10,8 @@
 
 @interface GHSquareCollectionCell : UICollectionViewCell
 
+
+@property (weak, nonatomic) IBOutlet UIImageView *pictureImageView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
 @end

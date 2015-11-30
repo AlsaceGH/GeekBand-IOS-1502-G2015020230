@@ -1,14 +1,14 @@
 //
-//  GHSquareCellTableViewCell.m
+//  GHPublishCell.m
 //  GHMoran
 //
-//  Created by alsace on 11/26/15.
+//  Created by alsace on 11/29/15.
 //  Copyright © 2015 GH. All rights reserved.
 //
 
-#import "GHSquareCellTableViewCell.h"
+#import "GHPublishCell.h"
 
-@implementation GHSquareCellTableViewCell
+@implementation GHPublishCell
 
 - (void)awakeFromNib {
     // Initialization code

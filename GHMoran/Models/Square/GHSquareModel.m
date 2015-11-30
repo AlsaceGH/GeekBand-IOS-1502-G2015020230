@@ -9,7 +9,7 @@
 #import "GHSquareModel.h"
 
 @implementation GHSquareModel
--(void)setValue:(id)value forKey:(NSString *)key{
+-(void)setValue:(id)value forUndefinedKey:(nonnull NSString *)key{
     
 }
 

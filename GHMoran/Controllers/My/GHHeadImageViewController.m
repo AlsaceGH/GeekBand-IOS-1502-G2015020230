@@ -70,15 +70,15 @@
     self.headImageView.image = image;
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
-    if(self.pickerController.sourceType==UIImagePickerControllerSourceTypePhotoLibrary){
-        UIStoryboard *story=[UIStoryboard storyboardWithName:@"GHPublish" bundle:nil];
-        GHPublishViewController *publish=[story instantiateViewControllerWithIdentifier:@"CMJ"];
-        UINavigationController *navigationController=[[UINavigationController alloc] initWithRootViewController:publish];
-       // publish.tag=2;
-        publish.publishPhoto=image;
-        [picker presentViewController:navigationController animated:YES completion:nil];
-        
-    }
+//    if(self.pickerController.sourceType==UIImagePickerControllerSourceTypePhotoLibrary){
+//        UIStoryboard *story=[UIStoryboard storyboardWithName:@"GHPublish" bundle:nil];
+//        GHPublishViewController *publish=[story instantiateViewControllerWithIdentifier:@"CMJ"];
+//        UINavigationController *navigationController=[[UINavigationController alloc] initWithRootViewController:publish];
+//        publish.tag=2;
+//        publish.publishPhoto=image;
+//        [picker presentViewController:navigationController animated:YES completion:nil];
+//        
+//    }
 }
 
 - (UIImage *)imageWithImage:(UIImage *)image scaleToSize:(CGSize)size
