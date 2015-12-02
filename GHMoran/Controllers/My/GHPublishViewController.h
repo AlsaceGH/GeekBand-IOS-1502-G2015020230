@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface GHPublishViewController : UIViewController<UITextViewDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface GHPublishViewController : UIViewController<UITextViewDelegate,UITableViewDelegate,UITableViewDataSource,CLLocationManagerDelegate>
 
 @property (nonatomic,strong)UIImage *publishPhoto;
 @property (nonatomic,strong)UIImagePickerController *imagePicker;
 @property (nonatomic)int tag;
 @property (nonatomic,strong)NSDictionary *dic;
+@property (retain, nonatomic) CLLocationManager *locationManager;
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;

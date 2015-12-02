@@ -71,7 +71,7 @@
                                             <constraint firstAttribute="height" constant="45" id="Kf6-HG-hVA"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal" title="上海市浦东新区长泰广场" image="publish_location">
+                                        <state key="normal" image="publish_location">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>

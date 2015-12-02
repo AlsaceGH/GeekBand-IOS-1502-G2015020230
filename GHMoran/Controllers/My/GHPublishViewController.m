@@ -12,12 +12,17 @@
 #import "GHPublishRequest.h"
 #import "GHUserModel.h"
 #import "GHGlobal.h"
+#import <CoreLocation/CoreLocation.h>
+#import "GHLocationModel.h"
+#import "GHLocationParser.h"
 
 #define selfWidth self.view.frame.size.width
 #define selfHeight self.view.frame.size.height
 @interface GHPublishViewController ()<GHPublishRequestDelegate>{
     BOOL openOrNot;
+    BOOL locationOrNot;
     UIActivityIndicatorView  *activity;
+    GHLocationModel *locationModel;
    
 }
 
@@ -47,11 +52,13 @@
     // add publish button
     [self makePublishButton];
     [self makeBackButton];
+    [self getLatitudeAndLongitude];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
 
 #pragma MARK----make back button
 -(void)makeBackButton{
@@ -103,6 +110,108 @@
     }
 }
 
+-(void)getLatitudeAndLongitude{
+    self.locationManager=[[CLLocationManager alloc] init];
+    self.locationManager.desiredAccuracy=kCLLocationAccuracyBest;
+    self.locationManager.distanceFilter=kCLDistanceFilterNone;
+    self.locationManager.delegate=self;
+    if ([[[UIDevice currentDevice] systemVersion] floatValue]>=8.0) {
+        [_locationManager requestWhenInUseAuthorization];
+    }
+    if ([CLLocationManager locationServicesEnabled]) {
+        [self.locationManager startUpdatingLocation];
+    }else{
+        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"错误" message:@"定位失败" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:@"取消", nil];
+        [alert show];
+    }
+}
+
+#pragma  Mark--location manager delegate
+
+//-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
+//    NSLog(@"==latitude %f, longitude %f",
+//          [[locations objectAtIndex:([locations count]-1)] coordinate].latitude ,
+//          [[locations objectAtIndex:([locations count]-1)] coordinate].longitude);
+//    
+//}
+
+
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
+    //get location lontitude and latitude
+    self.dic=[NSMutableDictionary dictionary];
+    NSLog(@"维度:%f",newLocation.coordinate.latitude);
+    NSLog(@"经度:%f",newLocation.coordinate.latitude);
+    NSString *latitude=[NSString stringWithFormat:@"%f",newLocation.coordinate.latitude];
+    NSString *longitude=[NSString stringWithFormat:@"%f",newLocation.coordinate.longitude];
+    
+    [self.dic setValue:latitude forKey:@"latitude"];
+    [self.dic setValue:longitude forKey:@"longitude"];
+    
+    CLLocationDegrees latitude2=newLocation.coordinate.latitude;
+    CLLocationDegrees longitude2=newLocation.coordinate.longitude;
+    
+    CLLocation *c=[[CLLocation alloc] initWithLatitude:latitude2 longitude:longitude2];
+    
+    //create location
+    CLGeocoder *revGeo=[[CLGeocoder alloc] init];
+    [revGeo reverseGeocodeLocation:c completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        if (!error && [placemarks count] > 0) {
+            NSDictionary *dict = [[placemarks objectAtIndex:0] addressDictionary];
+            self.locationButton.titleLabel.text = dict[@"Name"];
+
+        }else {
+            NSLog(@"ERROR:%@",error);
+        }
+    }];
+    //STOP update location
+    [manager stopUpdatingLocation];
+    
+}
+
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
+    NSLog(@"error:%@",error);
+}
+#pragma mark--get location from baidu apis
+-(void)makeLocation{
+    NSOperationQueue *queue=[[NSOperationQueue alloc] init];
+    NSBlockOperation *operation=[NSBlockOperation blockOperationWithBlock:^{
+        NSString *latitude=[NSString stringWithFormat:@"l=%@",[self.dic valueForKey:@"latitude"]];
+        NSString *str1=[latitude stringByAppendingString:@"%2C"];
+        NSString *httpArg=[NSString stringWithFormat:@"%@%@",str1,[self.dic valueForKey:@"longitude"]];
+        
+        NSString *httpUrl=@"http://apis.baidu.com/3023/geo/address";
+        [self requestApi:httpUrl withHttpArg:httpArg];
+    }];
+    [queue addOperation:operation];
+}
+-(void)requestApi:(NSString *)httpUrl withHttpArg:(NSString *)httpArg{
+    
+    NSString *urlStr = [[NSString alloc]initWithFormat: @"%@?%@", httpUrl, httpArg];
+    NSURL *url = [NSURL URLWithString: urlStr];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL: url cachePolicy: NSURLRequestUseProtocolCachePolicy timeoutInterval: 10];
+    [request setHTTPMethod: @"GET"];
+    [request addValue: @"0216bcbfec0aa9cd49e41e09f0289d30" forHTTPHeaderField: @"apikey"];
+    [NSURLConnection sendAsynchronousRequest: request
+                                       queue: [NSOperationQueue mainQueue]
+                           completionHandler: ^(NSURLResponse *response, NSData *data, NSError *error){
+                               if (error) {
+                                   NSLog(@"Httperror: %@%ld", error.localizedDescription, error.code);
+                               } else {
+                                   NSInteger responseCode = [(NSHTTPURLResponse *)response statusCode];
+                                   NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                                   NSLog(@"HttpResponseCode:%ld", responseCode);
+                                   NSLog(@"HttpResponseBody:%@",responseString);
+                                   locationModel=[[GHLocationModel alloc] init];
+                                   GHLocationParser *parser=[[GHLocationParser alloc] init];
+                                   locationModel=[parser parseJson:data];
+                                   locationOrNot=YES;
+                                   [self makeTableView];
+                               }
+                           }];
+    
+}
+
 #pragma mark ---publish request delegate
 -(void)requestSuccess:(GHPublishRequest *)request picId:(NSString *)picId{
     [self.parentViewController dismissViewControllerAnimated:YES completion:nil];
@@ -151,7 +260,7 @@
 }
 
 - (IBAction)publishLocation:(id)sender {
-    [self makeTableView];
+    [self makeLocation];
 }
 
 - (IBAction)returnToCamera:(id)sender {
@@ -203,23 +312,23 @@
 
 #pragma  MARK---tableView delegate methods
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 4;
+    return locationModel.addrArray.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     GHPublishCell *cell=[tableView dequeueReusableCellWithIdentifier:@"publishCell"];
     [cell setSelectionStyle:UITableViewCellSelectionStyleGray];
-    cell.nameLabel.text=@"上海";
-    cell.placeLabel.text=@"上海浦东国际金融中心";
-    
+    cell.nameLabel.text=locationModel.nameArray[indexPath.row];
+    cell.placeLabel.text=locationModel.addrArray[indexPath.row];
     return cell;
 }
 
--(CGFloat *)tableView:(UITableView *)tableView {
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 63;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    self.locationButton.titleLabel.text=locationModel.nameArray[indexPath.row];
     if (openOrNot==YES) {
         [self makeTableView];
     }
