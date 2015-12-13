@@ -49,6 +49,12 @@
 		01456CB11C04851700063C87 /* GHMy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01456CB01C04851700063C87 /* GHMy.storyboard */; };
 		01456CB51C0486BE00063C87 /* GHMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01456CB41C0486BE00063C87 /* GHMyViewController.m */; };
 		015C3EA91C0F0C7500A93B17 /* GHLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C3EA81C0F0C7500A93B17 /* GHLocationModel.m */; };
+		0163D90E1C10721C00D59DD1 /* GHViewDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0163D90D1C10721C00D59DD1 /* GHViewDetail.storyboard */; };
+		0163D9141C10773500D59DD1 /* GHViewDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163D9131C10773500D59DD1 /* GHViewDetailController.m */; };
+		0163D9181C1079DE00D59DD1 /* GHViewDetailRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163D9171C1079DE00D59DD1 /* GHViewDetailRequest.m */; };
+		0163D91B1C107A9A00D59DD1 /* GHViewDetailRequestParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163D91A1C107A9A00D59DD1 /* GHViewDetailRequestParser.m */; };
+		0163D91E1C107ACD00D59DD1 /* GHViewDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163D91D1C107ACD00D59DD1 /* GHViewDetailModel.m */; };
+		0163D9211C1080FB00D59DD1 /* GHCommentListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0163D9201C1080FB00D59DD1 /* GHCommentListCell.m */; };
 		0188268A1C08274D00C9422E /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018826891C08274D00C9422E /* ImageIO.framework */; };
 		01BF9BE51BFF53FD00B2944A /* GHMoranTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BF9BE41BFF53FD00B2944A /* GHMoranTests.m */; };
 		01BF9BF01BFF53FD00B2944A /* GHMoranUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BF9BEF1BFF53FD00B2944A /* GHMoranUITests.m */; };
@@ -79,7 +85,6 @@
 		01FC15571C06F5DF00C3BDCA /* GHPublish.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01FC15561C06F5DF00C3BDCA /* GHPublish.storyboard */; };
 		01FC15591C072C8800C3BDCA /* GHSquare.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01FC15581C072C8800C3BDCA /* GHSquare.storyboard */; };
 		01FC155B1C072ECD00C3BDCA /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01FC155A1C072ECD00C3BDCA /* images.xcassets */; };
-		01FC15601C0732A300C3BDCA /* GHViewDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FC155F1C0732A300C3BDCA /* GHViewDetailViewController.m */; };
 		01FC15641C07339D00C3BDCA /* GHSquareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FC15631C07339D00C3BDCA /* GHSquareCell.m */; };
 		01FC156A1C07346D00C3BDCA /* GHSquareCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FC15691C07346D00C3BDCA /* GHSquareCollectionCell.m */; };
 		01FC156D1C07400100C3BDCA /* GHSquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FC156C1C07400100C3BDCA /* GHSquareViewController.m */; };
@@ -190,6 +195,17 @@
 		01456CB41C0486BE00063C87 /* GHMyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHMyViewController.m; sourceTree = "<group>"; };
 		015C3EA71C0F0C7500A93B17 /* GHLocationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHLocationModel.h; sourceTree = "<group>"; };
 		015C3EA81C0F0C7500A93B17 /* GHLocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHLocationModel.m; sourceTree = "<group>"; };
+		0163D90D1C10721C00D59DD1 /* GHViewDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GHViewDetail.storyboard; sourceTree = "<group>"; };
+		0163D9121C10773500D59DD1 /* GHViewDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHViewDetailController.h; sourceTree = "<group>"; };
+		0163D9131C10773500D59DD1 /* GHViewDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHViewDetailController.m; sourceTree = "<group>"; };
+		0163D9161C1079DE00D59DD1 /* GHViewDetailRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHViewDetailRequest.h; sourceTree = "<group>"; };
+		0163D9171C1079DE00D59DD1 /* GHViewDetailRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHViewDetailRequest.m; sourceTree = "<group>"; };
+		0163D9191C107A9A00D59DD1 /* GHViewDetailRequestParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHViewDetailRequestParser.h; sourceTree = "<group>"; };
+		0163D91A1C107A9A00D59DD1 /* GHViewDetailRequestParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHViewDetailRequestParser.m; sourceTree = "<group>"; };
+		0163D91C1C107ACD00D59DD1 /* GHViewDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHViewDetailModel.h; sourceTree = "<group>"; };
+		0163D91D1C107ACD00D59DD1 /* GHViewDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHViewDetailModel.m; sourceTree = "<group>"; };
+		0163D91F1C1080FB00D59DD1 /* GHCommentListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHCommentListCell.h; sourceTree = "<group>"; };
+		0163D9201C1080FB00D59DD1 /* GHCommentListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHCommentListCell.m; sourceTree = "<group>"; };
 		018826891C08274D00C9422E /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		01BF9BC71BFF53FD00B2944A /* GHMoran.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHMoran.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BF9BE01BFF53FD00B2944A /* GHMoranTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GHMoranTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -245,8 +261,6 @@
 		01FC15561C06F5DF00C3BDCA /* GHPublish.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GHPublish.storyboard; sourceTree = "<group>"; };
 		01FC15581C072C8800C3BDCA /* GHSquare.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GHSquare.storyboard; sourceTree = "<group>"; };
 		01FC155A1C072ECD00C3BDCA /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
-		01FC155E1C0732A300C3BDCA /* GHViewDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHViewDetailViewController.h; sourceTree = "<group>"; };
-		01FC155F1C0732A300C3BDCA /* GHViewDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHViewDetailViewController.m; sourceTree = "<group>"; };
 		01FC15621C07339D00C3BDCA /* GHSquareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHSquareCell.h; sourceTree = "<group>"; };
 		01FC15631C07339D00C3BDCA /* GHSquareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHSquareCell.m; sourceTree = "<group>"; };
 		01FC15681C07346D00C3BDCA /* GHSquareCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHSquareCollectionCell.h; sourceTree = "<group>"; };
@@ -458,6 +472,15 @@
 			path = My;
 			sourceTree = "<group>";
 		};
+		0163D9151C1079BB00D59DD1 /* ViewDetail */ = {
+			isa = PBXGroup;
+			children = (
+				0163D9161C1079DE00D59DD1 /* GHViewDetailRequest.h */,
+				0163D9171C1079DE00D59DD1 /* GHViewDetailRequest.m */,
+			);
+			name = ViewDetail;
+			sourceTree = "<group>";
+		};
 		01BF9BBE1BFF53FD00B2944A = {
 			isa = PBXGroup;
 			children = (
@@ -634,6 +657,7 @@
 		01BF9C1F1BFF554700B2944A /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				0163D90D1C10721C00D59DD1 /* GHViewDetail.storyboard */,
 				01BF9C201BFF554700B2944A /* GHLoginAndRegister.storyboard */,
 				01456CB01C04851700063C87 /* GHMy.storyboard */,
 				01FC15561C06F5DF00C3BDCA /* GHPublish.storyboard */,
@@ -721,8 +745,8 @@
 		01FC155D1C07322F00C3BDCA /* ViewDetail */ = {
 			isa = PBXGroup;
 			children = (
-				01FC155E1C0732A300C3BDCA /* GHViewDetailViewController.h */,
-				01FC155F1C0732A300C3BDCA /* GHViewDetailViewController.m */,
+				0163D9121C10773500D59DD1 /* GHViewDetailController.h */,
+				0163D9131C10773500D59DD1 /* GHViewDetailController.m */,
 			);
 			path = ViewDetail;
 			sourceTree = "<group>";
@@ -737,6 +761,8 @@
 				013EDFD01C0BEEF2003F6A21 /* GHPublishCell.h */,
 				013EDFD11C0BEEF2003F6A21 /* GHPublishCell.m */,
 				013EDFD21C0BEEF2003F6A21 /* GHPublishCell.xib */,
+				0163D91F1C1080FB00D59DD1 /* GHCommentListCell.h */,
+				0163D9201C1080FB00D59DD1 /* GHCommentListCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -746,6 +772,8 @@
 			children = (
 				01FC156F1C07414B00C3BDCA /* GHSquareModel.h */,
 				01FC15701C07414B00C3BDCA /* GHSquareModel.m */,
+				0163D91C1C107ACD00D59DD1 /* GHViewDetailModel.h */,
+				0163D91D1C107ACD00D59DD1 /* GHViewDetailModel.m */,
 			);
 			path = Square;
 			sourceTree = "<group>";
@@ -764,6 +792,8 @@
 			children = (
 				01FC157D1C07431900C3BDCA /* GHSquareRequestParser.h */,
 				01FC157E1C07431900C3BDCA /* GHSquareRequestParser.m */,
+				0163D9191C107A9A00D59DD1 /* GHViewDetailRequestParser.h */,
+				0163D91A1C107A9A00D59DD1 /* GHViewDetailRequestParser.m */,
 			);
 			path = GHSquareRequestParser;
 			sourceTree = "<group>";
@@ -771,6 +801,7 @@
 		01FC15801C074B9700C3BDCA /* Square */ = {
 			isa = PBXGroup;
 			children = (
+				0163D9151C1079BB00D59DD1 /* ViewDetail */,
 				01FC15811C074BBD00C3BDCA /* GHSquareRequest.h */,
 				01FC15821C074BBD00C3BDCA /* GHSquareRequest.m */,
 			);
@@ -887,6 +918,7 @@
 				01BF9C2D1BFF554700B2944A /* GHLoginAndRegister.storyboard in Resources */,
 				01FC155B1C072ECD00C3BDCA /* images.xcassets in Resources */,
 				01FC15571C06F5DF00C3BDCA /* GHPublish.storyboard in Resources */,
+				0163D90E1C10721C00D59DD1 /* GHViewDetail.storyboard in Resources */,
 				013EDFD41C0BEEF2003F6A21 /* GHPublishCell.xib in Resources */,
 				01FC15591C072C8800C3BDCA /* GHSquare.storyboard in Resources */,
 				01BF9C2A1BFF554700B2944A /* LaunchScreen.storyboard in Resources */,
@@ -921,6 +953,7 @@
 				013EDFAF1C0A9C26003F6A21 /* MJRefreshAutoGifFooter.m in Sources */,
 				013EDFB41C0A9C26003F6A21 /* MJRefreshBackStateFooter.m in Sources */,
 				013EDFBC1C0A9C26003F6A21 /* UIView+MJExtension.m in Sources */,
+				0163D9211C1080FB00D59DD1 /* GHCommentListCell.m in Sources */,
 				013EDFAD1C0A9C26003F6A21 /* MJRefreshFooter.m in Sources */,
 				01FC15751C0741CF00C3BDCA /* GHPictureModel.m in Sources */,
 				013EDFC81C0A9C26003F6A21 /* UIImage+MultiFormat.m in Sources */,
@@ -932,8 +965,8 @@
 				013EDFAA1C0A9C26003F6A21 /* MJRefreshAutoFooter.m in Sources */,
 				01F3D4671C03245500882DDE /* GHRegisterViewController.m in Sources */,
 				013EDFBA1C0A9C26003F6A21 /* UIScrollView+MJExtension.m in Sources */,
+				0163D91E1C107ACD00D59DD1 /* GHViewDetailModel.m in Sources */,
 				013EDFBE1C0A9C26003F6A21 /* NSData+ImageContentType.m in Sources */,
-				01FC15601C0732A300C3BDCA /* GHViewDetailViewController.m in Sources */,
 				013EDFB11C0A9C26003F6A21 /* MJRefreshAutoStateFooter.m in Sources */,
 				01BF9C261BFF554700B2944A /* GHLoginRequestParser.m in Sources */,
 				013EDFCA1C0A9C26003F6A21 /* UIImageView+HighlightedWebCache.m in Sources */,
@@ -958,6 +991,7 @@
 				01456CB51C0486BE00063C87 /* GHMyViewController.m in Sources */,
 				013EDFAB1C0A9C26003F6A21 /* MJRefreshBackFooter.m in Sources */,
 				01E691091C0C824D00398FAB /* GHPublishRequest.m in Sources */,
+				0163D9181C1079DE00D59DD1 /* GHViewDetailRequest.m in Sources */,
 				01FC156D1C07400100C3BDCA /* GHSquareViewController.m in Sources */,
 				01FC157F1C07431A00C3BDCA /* GHSquareRequestParser.m in Sources */,
 				01F3D46E1C03546C00882DDE /* GHRegisterRequestParser.m in Sources */,
@@ -974,6 +1008,7 @@
 				01BF9C2C1BFF554700B2944A /* main.m in Sources */,
 				01FC15711C07414B00C3BDCA /* GHSquareModel.m in Sources */,
 				01F67BC41C05E67100F74828 /* GHReImageRequest.m in Sources */,
+				0163D9141C10773500D59DD1 /* GHViewDetailController.m in Sources */,
 				015C3EA91C0F0C7500A93B17 /* GHLocationModel.m in Sources */,
 				01FC156A1C07346D00C3BDCA /* GHSquareCollectionCell.m in Sources */,
 				013EDFCB1C0A9C26003F6A21 /* UIImageView+WebCache.m in Sources */,
@@ -983,6 +1018,7 @@
 				013EDFB91C0A9C26003F6A21 /* MJRefreshConst.m in Sources */,
 				01F67BBA1C05A15F00F74828 /* GHFollowUsAndHomePageViewController.m in Sources */,
 				013EDFC71C0A9C26003F6A21 /* UIImage+GIF.m in Sources */,
+				0163D91B1C107A9A00D59DD1 /* GHViewDetailRequestParser.m in Sources */,
 				013EDFB61C0A9C26003F6A21 /* MJRefreshNormalHeader.m in Sources */,
 				013EDFAC1C0A9C26003F6A21 /* MJRefreshComponent.m in Sources */,
 			);

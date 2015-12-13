@@ -11,9 +11,12 @@
 #import "GHGlobal.h"
 #import "GHSquareCell.h"
 #import "MJRefresh.h"
+#import "GHViewDetailController.h"
 
 
-@interface GHSquareViewController ()<GHSquareRequestDelegate>
+@interface GHSquareViewController ()<GHSquareRequestDelegate>{
+    
+}
 
 @end
 
@@ -82,6 +85,16 @@
     
     [self requestAllData];
  
+}
+
+-(void)toCheckPicture{
+    UIStoryboard *story=[UIStoryboard storyboardWithName:@"GHViewDetail" bundle:nil];
+    
+    GHViewDetailController *detailVC=[story instantiateViewControllerWithIdentifier:@"ViewDetailStoryboard"];
+    [detailVC.photoImage sd_setImageWithURL:[NSURL URLWithString:_pic_link]];
+    detailVC.pic_id=_pic_id;
+    detailVC.pic_url=_pic_link;
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

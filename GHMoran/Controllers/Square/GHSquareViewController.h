@@ -23,4 +23,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+-(void)toCheckPicture;
+
 @end

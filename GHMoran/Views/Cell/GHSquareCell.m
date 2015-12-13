@@ -56,5 +56,6 @@
     GHPictureModel *pictureModel=self.dataArr[indexPath.row];
     self.squareVC.pic_id=pictureModel.pic_id;
     self.squareVC.pic_link=pictureModel.pic_link;
+    [self.squareVC toCheckPicture];
 }
 @end
